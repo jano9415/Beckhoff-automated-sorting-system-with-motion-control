@@ -73,3 +73,13 @@ Network4 contains the React application.
 ![image](https://github.com/user-attachments/assets/c297853b-4e4d-4392-8f76-1fbe626f571d)
 
 ![image](https://github.com/user-attachments/assets/dea1ace9-7fbb-4e59-b6f6-0c3d5a3d7bac)
+
+Main screen:
+
+![image](https://github.com/user-attachments/assets/0773d878-6167-441b-9349-977abce885ca)
+
+Servo motion screen:
+
+![image](https://github.com/user-attachments/assets/c672d77d-fc1e-4476-868c-d86cb94e340b)
+
+
