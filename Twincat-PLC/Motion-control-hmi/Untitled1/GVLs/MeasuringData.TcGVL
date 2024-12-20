@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <GVL Name="MeasuringData" Id="{53ebf6b3-fc8a-4c89-a956-c998e4ef1fe8}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	AutomaticMode : BOOL;		
+	StartConveyor : BOOL;	
+	StopConveyor : BOOL;		
+	ItemInTheSystem : BOOL; //If there is an item in the system
+	TableAtHome : BOOL;		
+	TableAtBin1 : BOOL;		
+	TableAtBin2 : BOOL;		
+	TableAtBin3 : BOOL;		
+	TableAtBin4 : BOOL;		
+	ES1NC : BOOL; //Emergency button for simulation
+	ES2NC : BOOL; //Emergency button for simulation
+	ControlSupplyOK : BOOL; //Control 24V for simulation
+	SizeInCm : REAL;		
+	MetalMaterial : BOOL;		
+	WeightInKg : REAL;	
+	Bin1Breed : BOOL; //Small and non metal
+	Bin2Breed : BOOL; //Small and metal
+	Bin3Breed : BOOL; //Large and not metal
+	Bin4Breed : BOOL; //Large and metal
+	HomePosition : LREAL;	
+	Bin1Position : LREAL;		
+	Bin2Position : LREAL;		
+	Bin3Position : LREAL;		
+	Bin4Position : LREAL;	
+	MoveToBin1PositionByManual : BOOL;		
+	MoveToBin2PositionByManual : BOOL;		
+	MoveToBin3PositionByManual : BOOL;		
+	MoveToBin4PositionByManual : BOOL;		
+	MoveToHomeByManual : BOOL;		
+	SaveNewPositionOfBin1 : BOOL;	
+	SaveNewPositionOfBin2 : BOOL;		
+	SaveNewPositionOfBin3 : BOOL;		
+	SaveNewPositionOfBin4 : BOOL;		
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

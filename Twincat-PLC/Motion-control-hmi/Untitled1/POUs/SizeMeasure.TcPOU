@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="SizeMeasure" Id="{98e665cf-0e09-4803-b3b9-f218d0a86c5c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK SizeMeasure
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+	//0-115cm
+	sizeInCm : REAL;
+END_VAR
+VAR
+	//0%-100%
+	sizeInPercent : REAL;
+
+    rawMin   : INT := 0;
+    rawMax   : INT := 32767;
+    scaledMin : REAL := 0.0;
+    scaledMax : REAL := 115.0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Scaling
+sizeInPercent := (scaledMax - scaledMin) / (rawMax - rawMin);
+sizeInCm := scaledMin + (sizeInPercent * (inputs.Size_measure - rawMin));]]></ST>
+    </Implementation>
+    <LineIds Name="SizeMeasure">
+      <LineId Id="9" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="25" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

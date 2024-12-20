@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="WeightMeasure" Id="{7cec83c9-41cb-4c72-ac1e-ee0daca3bcd1}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK WeightMeasure
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+	//0-15kg
+	weightInKg : REAL;
+END_VAR
+VAR
+	//0%-100%
+	weightInPercent : REAL;
+
+    rawMin   : INT := 0;
+    rawMax   : INT := 32767;
+    scaledMin : REAL := 0.0;
+    scaledMax : REAL := 15.0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Scaling
+weightInPercent := (scaledMax - scaledMin) / (rawMax - rawMin);
+weightInKg := scaledMin + (weightInPercent * (inputs.Load_cell - rawMin));]]></ST>
+    </Implementation>
+    <LineIds Name="WeightMeasure">
+      <LineId Id="24" Count="1" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

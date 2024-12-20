@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="ServoManualMotion" Id="{d49eda9a-fd3f-47a2-9d2d-6548127ba3fc}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION ServoManualMotion
+VAR_INPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Move to home
+
+//Move to Bin1
+
+//Move to Bin2
+
+//Move to Bin3
+
+//Move to Bin4]]></ST>
+    </Implementation>
+    <LineIds Name="ServoManualMotion">
+      <LineId Id="7" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

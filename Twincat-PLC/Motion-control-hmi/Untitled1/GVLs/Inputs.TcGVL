@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <GVL Name="Inputs" Id="{c70a095e-21cd-4edf-bc0b-4a2b52cce9bc}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	Start_pos : BOOL;
+	Size_measure_pos : BOOL;
+	Weight_mes_pos : BOOL;
+	Servo_table_pos : BOOL;
+	Metal_sensor : BOOL;
+	Grip_cyl_end_ext : BOOL;
+	Grip_cyl_end_ret : BOOL;
+	Cyl_at_table_ext : BOOL;
+	Cyl_at_table_ret : BOOL;
+	ES1 : BOOL;
+	ES2 : BOOL;
+	Size_measure : INT;
+	Load_cell : INT;
+	Grip_cyl_start_ext : BOOL;
+	Grip_cyl_start_ret : BOOL;
+	Control24VButton : BOOL;
+	Metal_measure_pos : BOOL;
+	End_pos_at_conveyor : BOOL;
+	Item_left_the_table : BOOL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

@@ -4,16 +4,50 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	AxisControl : AxisControl;
+	sizeMeasure : sizeMeasure;
+	weightMeasure : WeightMeasure;
 	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[AxisControl();
-//AxisControl2();]]></ST>
+sizeMeasure();
+weightMeasure();
+
+//Size in cm
+sizeMeasure.sizeInCm;
+
+//Wweight in kg
+weightMeasure.weightInKg;
+
+//Breed calculation
+BreedCalculation();
+
+//Save new bin position
+SaveNewBinPosition();
+
+//Manual motion of servo
+ServoManualMotion();]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
       <LineId Id="9" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="32" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
