@@ -69,6 +69,9 @@
     <Compile Include="POUs\SizeMeasure.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\TablePositions.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\WeightMeasure.TcPOU">
       <SubType>Code</SubType>
     </Compile>

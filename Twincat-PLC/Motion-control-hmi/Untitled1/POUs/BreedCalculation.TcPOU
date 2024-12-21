@@ -5,18 +5,13 @@
 VAR_INPUT
 END_VAR
 VAR
-	sizeMeasure : SizeMeasure;
-	weightMeasure : WeightMeasure;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[sizeMeasure();
-weightMeasure();
-//Insted of a new object, just call the global object from the main
-//MAIN.sizeMeasure.sizeInCm;
-
+      <ST><![CDATA[
 //Small and non metal. Bin1 breed
-IF (sizeMeasure.sizeInCm >= 10.0 AND sizeMeasure.sizeInCm <= 20.0 AND weightMeasure.weightInKg <= 5.0 AND
+IF (MAIN.sizeMeasure.sizeInCm >= 10.0 AND MAIN.sizeMeasure.sizeInCm <= 20.0 AND MAIN.weightMeasure.weightInKg <= 5.0 AND
 	NOT MeasuringData.MetalMaterial) THEN
 	MeasuringData.Bin1Breed := TRUE;
 	MeasuringData.Bin2Breed := FALSE;
@@ -25,7 +20,7 @@ IF (sizeMeasure.sizeInCm >= 10.0 AND sizeMeasure.sizeInCm <= 20.0 AND weightMeas
 END_IF
 
 //Small and metal. Bin2 breed
-IF (sizeMeasure.sizeInCm >= 10.0 AND sizeMeasure.sizeInCm <= 20.0 AND weightMeasure.weightInKg <= 5.0 AND
+IF (MAIN.sizeMeasure.sizeInCm >= 10.0 AND MAIN.sizeMeasure.sizeInCm <= 20.0 AND MAIN.weightMeasure.weightInKg <= 5.0 AND
 	MeasuringData.MetalMaterial) THEN
 	MeasuringData.Bin1Breed := FALSE;
 	MeasuringData.Bin2Breed := TRUE;
@@ -34,7 +29,7 @@ IF (sizeMeasure.sizeInCm >= 10.0 AND sizeMeasure.sizeInCm <= 20.0 AND weightMeas
 END_IF
 
 //Large and non metal. Bin3 breed
-IF (sizeMeasure.sizeInCm >= 20.0 AND weightMeasure.weightInKg >= 5.1 AND
+IF (MAIN.sizeMeasure.sizeInCm >= 20.0 AND MAIN.weightMeasure.weightInKg >= 5.1 AND
 	NOT MeasuringData.MetalMaterial) THEN
 	MeasuringData.Bin1Breed := FALSE;
 	MeasuringData.Bin2Breed := FALSE;
@@ -43,7 +38,7 @@ IF (sizeMeasure.sizeInCm >= 20.0 AND weightMeasure.weightInKg >= 5.1 AND
 END_IF
 
 //Large and metal. Bin4 breed
-IF (sizeMeasure.sizeInCm >= 20.0 AND weightMeasure.weightInKg >= 5.1 AND
+IF (MAIN.sizeMeasure.sizeInCm >= 20.0 AND MAIN.weightMeasure.weightInKg >= 5.1 AND
 	MeasuringData.MetalMaterial) THEN
 	MeasuringData.Bin1Breed := FALSE;
 	MeasuringData.Bin2Breed := FALSE;
@@ -52,9 +47,7 @@ IF (sizeMeasure.sizeInCm >= 20.0 AND weightMeasure.weightInKg >= 5.1 AND
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="BreedCalculation">
-      <LineId Id="10" Count="0" />
-      <LineId Id="12" Count="0" />
-      <LineId Id="46" Count="2" />
+      <LineId Id="48" Count="0" />
       <LineId Id="7" Count="1" />
       <LineId Id="13" Count="1" />
       <LineId Id="16" Count="2" />

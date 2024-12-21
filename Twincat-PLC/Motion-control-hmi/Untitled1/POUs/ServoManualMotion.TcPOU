@@ -9,25 +9,71 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Move to home
+IF  NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToHomeByManual THEN
+	MAIN.AxisControl(ExecuteHomeByManual := TRUE);
+ELSE
+	MAIN.AxisControl(ExecuteHomeByManual := FALSE);
+END_IF
 
 //Move to Bin1
-
+IF  NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin1PositionByManual THEN
+	MAIN.AxisControl(AbsolutePosition := MeasuringData.Bin1Position);
+ELSE
+	MAIN.AxisControl(AbsolutePosition := 0.0);
+END_IF
 //Move to Bin2
-
+IF  NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin2PositionByManual THEN
+	MAIN.AxisControl(AbsolutePosition := MeasuringData.Bin2Position);
+ELSE
+	MAIN.AxisControl(AbsolutePosition := 0.0);
+END_IF
 //Move to Bin3
+IF  NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin3PositionByManual THEN
+	MAIN.AxisControl(AbsolutePosition := MeasuringData.Bin3Position);
+ELSE
+	MAIN.AxisControl(AbsolutePosition := 0.0);
+END_IF
+//Move to Bin4
+IF  NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin4PositionByManual THEN
+	MAIN.AxisControl(AbsolutePosition := MeasuringData.Bin4Position);
+ELSE
+	MAIN.AxisControl(AbsolutePosition := 0.0);
+END_IF
 
-//Move to Bin4]]></ST>
+//If one of the button is clicked on the HMI
+IF (NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin1PositionByManual) OR
+	(NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin2PositionByManual) OR
+	(NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin3PositionByManual) OR
+	(NOT MeasuringData.AutomaticMode AND MeasuringData.MoveToBin4PositionByManual) THEN
+	MAIN.AxisControl(ExecuteMoveAbsoluteByManual := TRUE);
+ELSE
+	MAIN.AxisControl(ExecuteMoveAbsoluteByManual := FALSE);
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="ServoManualMotion">
       <LineId Id="7" Count="0" />
+      <LineId Id="21" Count="1" />
+      <LineId Id="24" Count="1" />
+      <LineId Id="23" Count="0" />
       <LineId Id="9" Count="0" />
       <LineId Id="8" Count="0" />
+      <LineId Id="26" Count="3" />
       <LineId Id="11" Count="0" />
       <LineId Id="10" Count="0" />
+      <LineId Id="30" Count="3" />
       <LineId Id="13" Count="0" />
       <LineId Id="12" Count="0" />
+      <LineId Id="34" Count="3" />
       <LineId Id="15" Count="0" />
       <LineId Id="14" Count="0" />
+      <LineId Id="39" Count="3" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="47" Count="4" />
+      <LineId Id="46" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

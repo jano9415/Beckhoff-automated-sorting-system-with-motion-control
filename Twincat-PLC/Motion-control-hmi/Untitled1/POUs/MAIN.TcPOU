@@ -7,6 +7,8 @@ VAR
 	sizeMeasure : sizeMeasure;
 	weightMeasure : WeightMeasure;
 	
+	fbTon : TON;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -14,40 +16,68 @@ END_VAR
 sizeMeasure();
 weightMeasure();
 
-//Size in cm
-sizeMeasure.sizeInCm;
+//Control 24V power supply
+Control24V();
 
-//Wweight in kg
-weightMeasure.weightInKg;
+IF (MeasuringData.ES1NC AND MeasuringData.ES2NC AND Inputs.Control24VButton) THEN
+	fbTon(IN := TRUE, PT := T#3S);
+ELSE
+	fbTon(IN := FALSE);
+END_IF
 
-//Breed calculation
-BreedCalculation();
+MeasuringData.ControlSupplyOK := fbTon.Q;
+
+
+//If there is 24V control supply, the servo is ready to operate
+IF MeasuringData.ControlSupplyOK THEN
+	AxisControl(McPowerEnable := TRUE);
+ELSE
+	AxisControl(McPowerEnable := FALSE);
+END_IF
+
+//Table positions
+TablePositions();
 
 //Save new bin position
 SaveNewBinPosition();
 
+//Breed calculation
+BreedCalculation();
+
 //Manual motion of servo
-ServoManualMotion();]]></ST>
+ServoManualMotion();
+
+//PLC2 communication]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
       <LineId Id="9" Count="0" />
       <LineId Id="20" Count="0" />
-      <LineId Id="17" Count="0" />
-      <LineId Id="16" Count="0" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="21" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="77" Count="7" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="48" Count="1" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="56" Count="0" />
       <LineId Id="23" Count="0" />
+      <LineId Id="57" Count="0" />
       <LineId Id="25" Count="0" />
+      <LineId Id="58" Count="0" />
       <LineId Id="24" Count="0" />
       <LineId Id="26" Count="0" />
       <LineId Id="28" Count="0" />
-      <LineId Id="27" Count="0" />
-      <LineId Id="29" Count="0" />
-      <LineId Id="31" Count="0" />
       <LineId Id="30" Count="0" />
       <LineId Id="32" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="59" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

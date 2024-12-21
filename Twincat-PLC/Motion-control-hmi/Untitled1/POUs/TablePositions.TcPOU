@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="TablePositions" Id="{5cc5c5ae-0785-4ea6-b5cb-1b4d4145722e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION TablePositions
+VAR_INPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Home position
+IF MAIN.AxisControl.ActualPosition = 0.0 THEN
+	MeasuringData.TableAtHome := TRUE;
+ELSIF MAIN.AxisControl.ActualPosition > 0.0 THEN
+	MeasuringData.TableAtHome := FALSE;
+END_IF
+
+//Bin1 position
+IF MAIN.AxisControl.ActualPosition >= 29.99 AND MAIN.AxisControl.ActualPosition <= 30.099 THEN
+	MeasuringData.TableAtBin1 := TRUE;
+ELSIF MAIN.AxisControl.ActualPosition < 29.99 OR MAIN.AxisControl.ActualPosition > 30.099 THEN
+	MeasuringData.TableAtBin1 := FALSE;
+END_IF
+
+//Bin2 position
+IF MAIN.AxisControl.ActualPosition >= 59.99 AND MAIN.AxisControl.ActualPosition <= 60.099 THEN
+	MeasuringData.TableAtBin2 := TRUE;
+ELSIF MAIN.AxisControl.ActualPosition < 59.99 OR MAIN.AxisControl.ActualPosition > 60.099 THEN
+	MeasuringData.TableAtBin2 := FALSE;
+END_IF
+
+//Bin3 position
+IF MAIN.AxisControl.ActualPosition >= 89.99 AND MAIN.AxisControl.ActualPosition <= 90.099 THEN
+	MeasuringData.TableAtBin3 := TRUE;
+ELSIF MAIN.AxisControl.ActualPosition < 89.99 OR MAIN.AxisControl.ActualPosition > 90.099 THEN
+	MeasuringData.TableAtBin3 := FALSE;
+END_IF
+
+//Bin4 position
+IF MAIN.AxisControl.ActualPosition >= 119.99 AND MAIN.AxisControl.ActualPosition <= 120.099 THEN
+	MeasuringData.TableAtBin4 := TRUE;
+ELSIF MAIN.AxisControl.ActualPosition < 119.99 OR MAIN.AxisControl.ActualPosition > 120.099 THEN
+	MeasuringData.TableAtBin4 := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="TablePositions">
+      <LineId Id="7" Count="2" />
+      <LineId Id="11" Count="1" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="16" Count="3" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="21" Count="5" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="28" Count="5" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="35" Count="5" />
+      <LineId Id="34" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
