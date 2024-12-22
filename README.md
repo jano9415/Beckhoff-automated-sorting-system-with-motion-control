@@ -74,6 +74,28 @@ Network4 contains the React application.
 
 ![image](https://github.com/user-attachments/assets/dea1ace9-7fbb-4e59-b6f6-0c3d5a3d7bac)
 
+Function, function blocks, global variable lists, motion objects and HMI screens in TwinCAT:
+
+![image](https://github.com/user-attachments/assets/7f9e40c6-864c-44e6-aace-d146ac12be8e)
+
+![image](https://github.com/user-attachments/assets/7ab7670c-3f55-49ae-89eb-261087a505f1)
+
+Main screen in the HMI after pushing the control 24V button for two seconds. There is 24V for the output modules and this is indicated by the blue light (for test case, on the screen) and the text on the screen.
+
+![image](https://github.com/user-attachments/assets/61fb9d47-e54d-4e33-878f-f1e0d2ded1f8)
+
+
+
+
+
+
+
+
+
+
+
+
+
 Main screen:
 
 ![image](https://github.com/user-attachments/assets/0773d878-6167-441b-9349-977abce885ca)
