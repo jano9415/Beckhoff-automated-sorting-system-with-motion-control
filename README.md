@@ -84,24 +84,37 @@ Main screen in the HMI after pushing the control 24V button for two seconds. The
 
 ![image](https://github.com/user-attachments/assets/61fb9d47-e54d-4e33-878f-f1e0d2ded1f8)
 
+In order to start the conveyor switch the automatic mode and push the Start conveyor button for 2 seconds. The yellow light shows that the conveyor moves.
 
+![image](https://github.com/user-attachments/assets/0740191c-27fb-4b91-bd4a-726c6f5d94f4)
 
+Put the item on the conveyor. The item starts and the green light goes on indicating that there is an item in the system and the yellow light goes off. The program mesures the size and weight and decides the material. Finally calculating the breed from the previous data.
 
+![image](https://github.com/user-attachments/assets/feea1371-878d-4aab-affa-3913bfa6e6f0)
 
+If the table is at home position and the proper bin is not full (this data comes from PLC2 using TCP/IP communication with TSEND and TRCV blocks) then the cylinder in the end of the conveyor moves backward and the item moves on the table. The servo motor carries the table to the appropriate postion. In this example the item is small and metal, so it should be moved to bin 2.
 
+![image](https://github.com/user-attachments/assets/6c4ca44b-16fe-40f4-8fe9-199dd0c5fd87)
 
+If the bin is not full (this data comes from PLC2 using TCP/IP communication with TSEND and TRCV blocks) the cylinder situated on the table pushes the item into the bin. If the item passes in front of the sensor during heading towards the bin and the cylinder in back position on the servo controlled table, the table moves back to home position and the cycle end. There is no item in the system any more.
 
+![image](https://github.com/user-attachments/assets/61fb9d47-e54d-4e33-878f-f1e0d2ded1f8)
 
+This is the plain operation but I have been adding new functions to the system to practise as many things as I can and creating a more complex project with more and more logic.
 
+Inputs screen in the HMI: You can see on this screen the inputs from the sensors. I can add as many sensors as I can. More inputs are the same as these ones.
 
+Manual motion screen in the HMI: You can control the outputs by manual on this screen. I can add as many outputs as I can. More outputs are the same as these ones.
 
+Servo motion screen in the HMI: You can move the servo motor by manual on this screen. By typing the jog velocity in the input field and clicking the Jog+ or Jog-, you can move the servo controlled table forward or backward. By clicking the Home button, the tables moves to home. By clicking the Bin1 button, the tables moves to the position of bin 1. Bin2, Bin3 and Bin4 buttons have the same function.
 
-Main screen:
-
-![image](https://github.com/user-attachments/assets/0773d878-6167-441b-9349-977abce885ca)
-
-Servo motion screen:
+If the table is not in the right position for any reason: Move the table with Jog+ and Jog- buttons to the appropriate position and click Bin1, Bin2, Bin3 or Bin4 button beneath "Save new position" text. After the table moves to this new position.
 
 ![image](https://github.com/user-attachments/assets/c672d77d-fc1e-4476-868c-d86cb94e340b)
+
+Menu in react web application:
+The system can be reached from anywhere by the web browser using OPC-UA and HTTP communication. I can make the same functionality as the HMI has with any inputs, outputs, texts and information. I've created just the main menu in this application and the basic communication between react and nodeJs and between nodeJs and the PLC. I will add functions to this application, but now I focus on the PLC side.
+
+![image](https://github.com/user-attachments/assets/9eb436e0-f119-4e9e-8563-3abbf0c77789)
 
 
