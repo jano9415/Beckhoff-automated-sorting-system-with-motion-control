@@ -110,7 +110,7 @@ Servo motion screen in the HMI: You can move the servo motor by manual on this s
 
 If the table is not in the right position for any reason: Move the table with Jog+ and Jog- buttons to the appropriate position and click Bin1, Bin2, Bin3 or Bin4 button beneath "Save new position" text. After the table moves to this new position.
 
-![image](https://github.com/user-attachments/assets/c672d77d-fc1e-4476-868c-d86cb94e340b)
+![image](https://github.com/user-attachments/assets/8d93aa64-3396-49e1-8b2a-63c2605eb077)
 
 Menu in react web application:
 The system can be reached from anywhere by the web browser using OPC-UA and HTTP communication. I can make the same functionality as the HMI has with any inputs, outputs, texts and information. I've created just the main menu in this application and the basic communication between react and nodeJs and between nodeJs and the PLC. I will add functions to this application, but now I focus on the PLC side.
