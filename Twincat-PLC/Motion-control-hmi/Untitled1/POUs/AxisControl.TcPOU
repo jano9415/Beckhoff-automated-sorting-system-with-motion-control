@@ -5,6 +5,10 @@
 VAR_INPUT
 	//Enable
 	McPowerEnable : BOOL;
+	//Jog
+	JogForward : BOOL;
+	JogBackward : BOOL;
+	JogVelocity : LREAL;
 	//Absolute move
 	AbsolutePosition : LREAL;
 	ExecuteMoveAbsoluteByManual : BOOL;
@@ -30,8 +34,6 @@ VAR
 	AxisStatus : BOOL;
 	//JOG
 	McJog : MC_Jog;
-	JogForward : BOOL;
-	JogBackward : BOOL;
 
 	//Relative
 	McMoveRelative : MC_MoveRelative;
@@ -707,8 +709,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"10"</v>
-                            <v n="Type">"INT"</v>
+                            <v n="Operand">"JogVelocity"</v>
+                            <v n="Type">"LREAL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
@@ -1731,8 +1733,8 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"AbsoluteVelocity"</v>
-                            <v n="Type">"LREAL"</v>
+                            <v n="Operand">"8"</v>
+                            <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>

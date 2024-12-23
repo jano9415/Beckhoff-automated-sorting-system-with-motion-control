@@ -7,14 +7,16 @@ VAR_GLOBAL
 	StartConveyor : BOOL;	
 	StopConveyor : BOOL;		
 	ItemInTheSystem : BOOL; //If there is an item in the system
+	ItemInTheSystemOnHmi : BOOL := TRUE; //If the variable true the text is invisible
 	TableAtHome : BOOL;		
 	TableAtBin1 : BOOL;		
 	TableAtBin2 : BOOL;		
 	TableAtBin3 : BOOL;		
 	TableAtBin4 : BOOL;		
-	ES1NC : BOOL; //Emergency button for simulation
-	ES2NC : BOOL; //Emergency button for simulation
+	ES1NC : BOOL := TRUE; //Emergency button for simulation
+	ES2NC : BOOL := TRUE; //Emergency button for simulation
 	ControlSupplyOK : BOOL; //Control 24V for simulation
+	ControlSupplyOKOnHmi : BOOL := TRUE; //If the variable true the text is invisible
 	SizeInCm : REAL;		
 	MetalMaterial : BOOL;		
 	WeightInKg : REAL;	
@@ -22,11 +24,15 @@ VAR_GLOBAL
 	Bin2Breed : BOOL; //Small and metal
 	Bin3Breed : BOOL; //Large and not metal
 	Bin4Breed : BOOL; //Large and metal
+	Bin1BreedOnHmi : BOOL := TRUE; //If the variable true the text is invisible
+	Bin2BreedOnHmi : BOOL := TRUE; //If the variable true the text is invisible
+	Bin3BreedOnHmi : BOOL := TRUE; //If the variable true the text is invisible
+	Bin4BreedOnHmi : BOOL := TRUE; //If the variable true the text is invisible
 	HomePosition : LREAL;	
-	Bin1Position : LREAL;		
-	Bin2Position : LREAL;		
-	Bin3Position : LREAL;		
-	Bin4Position : LREAL;	
+	Bin1Position : LREAL := 30.0;		
+	Bin2Position : LREAL := 60.0;		
+	Bin3Position : LREAL := 90.0;		
+	Bin4Position : LREAL := 120.0;	
 	MoveToBin1PositionByManual : BOOL;		
 	MoveToBin2PositionByManual : BOOL;		
 	MoveToBin3PositionByManual : BOOL;		

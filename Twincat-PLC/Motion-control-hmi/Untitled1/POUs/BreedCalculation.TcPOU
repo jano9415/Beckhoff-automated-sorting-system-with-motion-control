@@ -17,6 +17,11 @@ IF (MAIN.sizeMeasure.sizeInCm >= 10.0 AND MAIN.sizeMeasure.sizeInCm <= 20.0 AND 
 	MeasuringData.Bin2Breed := FALSE;
 	MeasuringData.Bin3Breed := FALSE;
 	MeasuringData.Bin4Breed := FALSE;
+	//Variables on the HMI
+	MeasuringData.Bin1BreedOnHmi := FALSE;
+	MeasuringData.Bin2BreedOnHmi := TRUE;
+	MeasuringData.Bin3BreedOnHmi := TRUE;
+	MeasuringData.Bin4BreedOnHmi := TRUE;
 END_IF
 
 //Small and metal. Bin2 breed
@@ -26,6 +31,11 @@ IF (MAIN.sizeMeasure.sizeInCm >= 10.0 AND MAIN.sizeMeasure.sizeInCm <= 20.0 AND 
 	MeasuringData.Bin2Breed := TRUE;
 	MeasuringData.Bin3Breed := FALSE;
 	MeasuringData.Bin4Breed := FALSE;
+	//Variables on the HMI
+	MeasuringData.Bin1BreedOnHmi := TRUE;
+	MeasuringData.Bin2BreedOnHmi := FALSE;
+	MeasuringData.Bin3BreedOnHmi := TRUE;
+	MeasuringData.Bin4BreedOnHmi := TRUE;
 END_IF
 
 //Large and non metal. Bin3 breed
@@ -35,6 +45,11 @@ IF (MAIN.sizeMeasure.sizeInCm >= 20.0 AND MAIN.weightMeasure.weightInKg >= 5.1 A
 	MeasuringData.Bin2Breed := FALSE;
 	MeasuringData.Bin3Breed := TRUE;
 	MeasuringData.Bin4Breed := FALSE;
+	//Variables on the HMI
+	MeasuringData.Bin1BreedOnHmi := TRUE;
+	MeasuringData.Bin2BreedOnHmi := TRUE;
+	MeasuringData.Bin3BreedOnHmi := FALSE;
+	MeasuringData.Bin4BreedOnHmi := TRUE;
 END_IF
 
 //Large and metal. Bin4 breed
@@ -44,6 +59,11 @@ IF (MAIN.sizeMeasure.sizeInCm >= 20.0 AND MAIN.weightMeasure.weightInKg >= 5.1 A
 	MeasuringData.Bin2Breed := FALSE;
 	MeasuringData.Bin3Breed := FALSE;
 	MeasuringData.Bin4Breed := TRUE;
+	//Variables on the HMI
+	MeasuringData.Bin1BreedOnHmi := TRUE;
+	MeasuringData.Bin2BreedOnHmi := TRUE;
+	MeasuringData.Bin3BreedOnHmi := TRUE;
+	MeasuringData.Bin4BreedOnHmi := FALSE;
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="BreedCalculation">
@@ -51,12 +71,21 @@ END_IF]]></ST>
       <LineId Id="7" Count="1" />
       <LineId Id="13" Count="1" />
       <LineId Id="16" Count="2" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="57" Count="2" />
+      <LineId Id="56" Count="0" />
       <LineId Id="15" Count="0" />
       <LineId Id="20" Count="7" />
+      <LineId Id="61" Count="3" />
+      <LineId Id="60" Count="0" />
       <LineId Id="19" Count="0" />
       <LineId Id="29" Count="7" />
+      <LineId Id="66" Count="3" />
+      <LineId Id="65" Count="0" />
       <LineId Id="28" Count="0" />
       <LineId Id="38" Count="7" />
+      <LineId Id="71" Count="3" />
+      <LineId Id="70" Count="0" />
       <LineId Id="37" Count="0" />
     </LineIds>
   </POU>

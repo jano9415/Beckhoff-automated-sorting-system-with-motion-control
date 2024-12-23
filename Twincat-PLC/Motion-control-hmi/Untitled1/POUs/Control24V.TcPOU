@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
-  <POU Name="Control24V" Id="{454e5c67-702f-480f-863a-dbbb804afe59}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION Control24V
+  <POU Name="Control24V" Id="{03f579a4-6038-48bc-8719-ea185ef53f02}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Control24V
 VAR_INPUT
+END_VAR
+VAR_OUTPUT
 END_VAR
 VAR
 	fbTon : TON;
@@ -18,16 +20,15 @@ ELSE
 END_IF
 
 MeasuringData.ControlSupplyOK := fbTon.Q;
-
-]]></ST>
+MeasuringData.ControlSupplyOKOnHmi := NOT fbTon.Q;]]></ST>
     </Implementation>
     <LineIds Name="Control24V">
-      <LineId Id="7" Count="1" />
-      <LineId Id="11" Count="1" />
-      <LineId Id="18" Count="1" />
-      <LineId Id="13" Count="1" />
+      <LineId Id="11" Count="3" />
       <LineId Id="16" Count="1" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="21" Count="0" />
       <LineId Id="9" Count="0" />
+      <LineId Id="30" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

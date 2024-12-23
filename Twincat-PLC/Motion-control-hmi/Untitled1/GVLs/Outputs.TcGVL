@@ -3,6 +3,19 @@
   <GVL Name="Outputs" Id="{55043a6e-9b53-461d-9f9c-c0a1d203dd65}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
+	Green_light : BOOL;
+	Yellow_light : BOOL;
+	Red_light : BOOL;
+	Move_grip_cyl_end_fwd : BOOL;
+	Move_grip_cyl_end_bwd : BOOL;
+	Move_cyl_at_table_fwd : BOOL;
+	Move_cyl_at_table_bwd : BOOL;
+	Conveyor_forward : BOOL;
+	Conveyor_backward : BOOL;
+	Move_grip_cyl_start_fwd : BOOL;
+	Move_grip_cyl_start_bwd : BOOL;
+	Blue_light : BOOL;
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

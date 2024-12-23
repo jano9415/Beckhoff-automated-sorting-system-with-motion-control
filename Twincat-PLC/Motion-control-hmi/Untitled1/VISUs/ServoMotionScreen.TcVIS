@@ -166,12 +166,17 @@
                     <v n="VisualElementIdentifier">"GenElemInst_3"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                       <v>OnMouseDown</v>
-                      <a cet="ToggleVarInputAction">
+                      <a cet="STSnippetInputAction">
                         <o>
-                          <v n="ToggleVariable">"MAIN.AxisControl.JogForward"</v>
-                          <n n="Error" />
+                          <v n="STSnippet">"MAIN.AxisControl.JogForward := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MAIN.AxisControl.JogForward := FALSE;"</v>
                         </o>
                       </a>
                     </d>
@@ -337,12 +342,17 @@
                     <v n="VisualElementIdentifier">"GenElemInst_5"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                       <v>OnMouseDown</v>
-                      <a cet="ToggleVarInputAction">
+                      <a cet="STSnippetInputAction">
                         <o>
-                          <v n="ToggleVariable">"MAIN.AxisControl.JogBackward"</v>
-                          <n n="Error" />
+                          <v n="STSnippet">"MAIN.AxisControl.JogBackward := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MAIN.AxisControl.JogBackward := FALSE;"</v>
                         </o>
                       </a>
                     </d>
@@ -397,7 +407,7 @@
                         </o>
                         <o>
                           <v n="Id">1647042231L</v>
-                          <v n="Value">"MAIN.AxisControl.ExecuteHomeByManual"</v>
+                          <v n="Value">""</v>
                         </o>
                         <o>
                           <v n="Id">2812299069L</v>
@@ -497,6 +507,10 @@
                           <v n="Value">false</v>
                         </o>
                         <o>
+                          <v n="Id">2477733581L</v>
+                          <v n="Value">""</v>
+                        </o>
+                        <o>
                           <v n="Id">823443203L</v>
                           <v n="Value">"543"</v>
                         </o>
@@ -508,7 +522,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_7"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MAIN.AxisControl.ExecuteHomeByManual := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MAIN.AxisControl.ExecuteHomeByManual := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{77f503e6-21af-40b8-bcca-772d46db073e}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -671,7 +698,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_9"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin1PositionByManual := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin1PositionByManual := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{f57735b1-f808-4e78-ab22-a852a07fa29a}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -834,7 +874,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_11"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin2PositionByManual := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin2PositionByManual := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{cf977191-e3e8-4118-aff2-dd819c8b452b}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -997,7 +1050,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_13"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin3PositionByManual := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin3PositionByManual := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{eb797df9-129d-4d50-a2d5-c5b0ae280937}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -1160,7 +1226,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_15"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin4PositionByManual := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.MoveToBin4PositionByManual := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{cb98ee36-3f50-43ab-a2b2-e5233edd899c}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -1894,7 +1973,7 @@
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"%.0f"</v>
+                      <v n="Value">"%.2f"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -1906,7 +1985,7 @@
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"489"</v>
+                      <v n="Value">"236"</v>
                     </o>
                   </l>
                 </o>
@@ -2055,7 +2134,7 @@
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"%.0f"</v>
+                      <v n="Value">"%.2f"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -2063,7 +2142,11 @@
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"489"</v>
+                      <v n="Value">"236"</v>
+                    </o>
+                    <o>
+                      <v n="Id">2477733581L</v>
+                      <v n="Value">"MAIN.AxisControl.JogVelocity"</v>
                     </o>
                   </l>
                 </o>
@@ -2239,7 +2322,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_28"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin1 := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin1 := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{9ebad420-be4d-45fb-9654-beba66eb8563}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -2402,7 +2498,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_30"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin2 := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin2 := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{73888b13-f495-4285-9737-01ba39aa0b2c}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -2565,7 +2674,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_32"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin3 := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin3 := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{1d8ef294-30cb-431e-b0a9-d5a4e0312cdc}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -2728,7 +2850,20 @@
                     <v n="VisualElementIdentifier">"GenElemInst_34"</v>
                     <n n="VisualElementOfflinePaintCommands" />
                     <n n="VisualElementFrameInformation" />
-                    <d n="VisualElementInputActions" t="Hashtable" />
+                    <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
+                      <v>OnMouseDown</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin4 := TRUE;"</v>
+                        </o>
+                      </a>
+                      <v>OnMouseUp</v>
+                      <a cet="STSnippetInputAction">
+                        <o>
+                          <v n="STSnippet">"MeasuringData.SaveNewPositionOfBin4 := FALSE;"</v>
+                        </o>
+                      </a>
+                    </d>
                     <v n="VisualElementIdentification">{55457885-9d45-48ac-bf73-ce3a4bf769eb}</v>
                     <v n="VisualElementOwningObjectGuid">{061a066e-eb74-49b5-a389-cec1d8a7b7a4}</v>
                     <a n="LMGuids" et="Guid" />
@@ -3125,16 +3260,16 @@
         <Type n="Guid">System.Guid</Type>
         <Type n="Hashtable">System.Collections.Hashtable</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
-        <Type n="IInputAction[]">_3S.CoDeSys.VisualElem.IInputAction[], VisualElem, Version=3.5.13.0, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="Int16">System.Int16</Type>
         <Type n="Int32">System.Int32</Type>
         <Type n="Int64">System.Int64</Type>
         <Type n="NamedStyleColor">{fa491db2-51ff-4bc1-9cd0-ce8c94ff6216}</Type>
         <Type n="NamedStyleFont">{9e842eb2-1463-4af2-b605-4fbb17044f94}</Type>
         <Type n="String">System.String</Type>
+        <Type n="STSnippetInputAction">{6302d3fe-6ea5-4c42-819a-a9734a133b3d}</Type>
+        <Type n="STSnippetInputAction[]">_3S.CoDeSys.VisualElem.STSnippetInputAction[], VisualElem.plugin, Version=3.5.13.32, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="TextDocument">{f3878285-8e4f-490b-bb1b-9acbb7eb04db}</Type>
         <Type n="TextLine">{a5de0b0b-1cb5-4913-ac21-9d70293ec00d}</Type>
-        <Type n="ToggleVarInputAction">{9dcc475d-e53e-4dd3-abd9-995bf52d466f}</Type>
         <Type n="UInt16">System.UInt16</Type>
         <Type n="UInt32">System.UInt32</Type>
         <Type n="VisualElemCollection">{ef9d0b20-c96e-48db-b361-2ded4063150e}</Type>
