@@ -19,15 +19,28 @@ ELSE
 	fbTon(IN := FALSE);
 END_IF
 
-MeasuringData.ControlSupplyOK := fbTon.Q;
-MeasuringData.ControlSupplyOKOnHmi := NOT fbTon.Q;]]></ST>
+IF fbTon.Q THEN
+	MeasuringData.ControlSupplyOK := TRUE;
+	MeasuringData.ControlSupplyOKOnHmi := FALSE;
+END_IF
+
+IF NOT MeasuringData.ES1NC OR NOT MeasuringData.ES2NC THEN
+	MeasuringData.ControlSupplyOK := FALSE;
+	MeasuringData.ControlSupplyOKOnHmi := TRUE;
+END_IF
+
+]]></ST>
     </Implementation>
     <LineIds Name="Control24V">
       <LineId Id="11" Count="3" />
       <LineId Id="16" Count="1" />
       <LineId Id="19" Count="0" />
+      <LineId Id="39" Count="2" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="50" Count="3" />
+      <LineId Id="49" Count="0" />
       <LineId Id="21" Count="0" />
-      <LineId Id="9" Count="0" />
       <LineId Id="30" Count="0" />
     </LineIds>
   </POU>

@@ -6,6 +6,11 @@
         <o xml:space="preserve" t="GlobalTextListObject">
           <l n="TextList" t="ArrayList" cet="TextListRow">
             <o>
+              <v n="TextID">"387"</v>
+              <v n="TextDefault">"%"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"489"</v>
               <v n="TextDefault">"%.0f"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -21,6 +26,11 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"991"</v>
+              <v n="TextDefault">"%d"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"10"</v>
               <v n="TextDefault">"24V OK"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -28,6 +38,11 @@
             <o>
               <v n="TextID">"115"</v>
               <v n="TextDefault">"Actual position"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"317"</v>
+              <v n="TextDefault">"Actual step"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
@@ -153,6 +168,11 @@
             <o>
               <v n="TextID">"392"</v>
               <v n="TextDefault">"Lights"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"853"</v>
+              <v n="TextDefault">"Main screen"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>

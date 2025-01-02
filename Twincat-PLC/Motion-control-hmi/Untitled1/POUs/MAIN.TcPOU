@@ -164,7 +164,7 @@ END_IF
 
 //Moving the servo controlled table to the appropriate position.
 //If the item is already on the table, extending the cylinder in end position.
-IF Inputs.Servo_table_pos THEN
+IF Steps.ActualStep = 6 AND Inputs.Servo_table_pos THEN
 	fbTon6(IN := TRUE, PT := T#2S);
 ELSE
 	fbTon6(IN := FALSE);
@@ -178,6 +178,7 @@ END_IF
 IF fbTon6.Q AND MeasuringData.Bin1Breed AND NOT BinSensorsFromPlc2.Bin1Full THEN
 	AxisControl(AbsolutePosition := MeasuringData.Bin1Position);
 	AxisControl(MoveToBin1 := TRUE);
+	Steps.ActualStep := 7;
 ELSE
 	AxisControl(AbsolutePosition := 0.0);
 	AxisControl(MoveToBin1 := FALSE);
@@ -187,6 +188,7 @@ END_IF
 IF fbTon6.Q AND MeasuringData.Bin2Breed AND NOT BinSensorsFromPlc2.Bin2Full THEN
 	AxisControl(AbsolutePosition := MeasuringData.Bin2Position);
 	AxisControl(MoveToBin2 := TRUE);
+	Steps.ActualStep := 7;
 ELSE
 	AxisControl(AbsolutePosition := 0.0);
 	AxisControl(MoveToBin2 := FALSE);
@@ -196,6 +198,7 @@ END_IF
 IF fbTon6.Q AND MeasuringData.Bin3Breed AND NOT BinSensorsFromPlc2.Bin3Full THEN
 	AxisControl(AbsolutePosition := MeasuringData.Bin3Position);
 	AxisControl(MoveToBin3 := TRUE);
+	Steps.ActualStep := 7;
 ELSE
 	AxisControl(AbsolutePosition := 0.0);
 	AxisControl(MoveToBin3 := FALSE);
@@ -205,6 +208,7 @@ END_IF
 IF fbTon6.Q AND MeasuringData.Bin4Breed AND NOT BinSensorsFromPlc2.Bin4Full THEN
 	AxisControl(AbsolutePosition := MeasuringData.Bin4Position);
 	AxisControl(MoveToBin4 := TRUE);
+	Steps.ActualStep := 7;
 ELSE
 	AxisControl(AbsolutePosition := 0.0);
 	AxisControl(MoveToBin4 := FALSE);
@@ -220,7 +224,7 @@ The green light goes off.
 The yellow light goes on.
 Reset the parameters of the item.
 *)
-IF Inputs.Servo_table_pos AND (
+IF Steps.ActualStep = 7 AND Inputs.Servo_table_pos AND (
 	(MeasuringData.Bin1Breed AND NOT BinSensorsFromPlc2.Bin1Full) OR
 	(MeasuringData.Bin2Breed AND NOT BinSensorsFromPlc2.Bin2Full) OR
 	(MeasuringData.Bin3Breed AND NOT BinSensorsFromPlc2.Bin3Full) OR
@@ -264,6 +268,7 @@ IF fbTp1.Q THEN
 	MeasuringData.Bin3BreedOnHmi := TRUE;
 	MeasuringData.Bin4Breed := FALSE;
 	MeasuringData.Bin4BreedOnHmi := TRUE;
+	Steps.ActualStep := 1;
 	
 	IF NOT Inputs.Servo_table_pos AND Inputs.Cyl_at_table_ret THEN
 		AxisControl(ExecuteHomeByAutomatic := TRUE);
@@ -403,25 +408,32 @@ END_IF
       <LineId Id="255" Count="0" />
       <LineId Id="405" Count="0" />
       <LineId Id="257" Count="0" />
+      <LineId Id="448" Count="0" />
       <LineId Id="259" Count="0" />
       <LineId Id="406" Count="0" />
       <LineId Id="260" Count="0" />
       <LineId Id="258" Count="0" />
       <LineId Id="263" Count="2" />
       <LineId Id="410" Count="0" />
-      <LineId Id="266" Count="1" />
+      <LineId Id="266" Count="0" />
+      <LineId Id="449" Count="0" />
+      <LineId Id="267" Count="0" />
       <LineId Id="411" Count="0" />
       <LineId Id="268" Count="0" />
       <LineId Id="262" Count="0" />
       <LineId Id="270" Count="2" />
       <LineId Id="412" Count="0" />
-      <LineId Id="273" Count="1" />
+      <LineId Id="273" Count="0" />
+      <LineId Id="450" Count="0" />
+      <LineId Id="274" Count="0" />
       <LineId Id="413" Count="0" />
       <LineId Id="275" Count="0" />
       <LineId Id="269" Count="0" />
       <LineId Id="277" Count="2" />
       <LineId Id="414" Count="0" />
-      <LineId Id="280" Count="1" />
+      <LineId Id="280" Count="0" />
+      <LineId Id="451" Count="0" />
+      <LineId Id="281" Count="0" />
       <LineId Id="415" Count="0" />
       <LineId Id="282" Count="0" />
       <LineId Id="276" Count="0" />
@@ -456,6 +468,7 @@ END_IF
       <LineId Id="416" Count="0" />
       <LineId Id="390" Count="6" />
       <LineId Id="382" Count="0" />
+      <LineId Id="452" Count="0" />
       <LineId Id="397" Count="0" />
       <LineId Id="399" Count="3" />
       <LineId Id="398" Count="0" />
